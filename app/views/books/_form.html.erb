@@ -1,0 +1,12 @@
+<% if @book.errors.any? %>
+ <div id="error-message">
+    <div class="alert-danger">
+        <%= @book.errors.count %>errors prohibited this book from being saved:
+    </div>
+    <ul>
+        <% @book.errors.full_messages.each do |message| %>
+        <li style="color: red;"><%= message %></li>
+        <% end %>
+    </ul>
+ </div>
+<% end %>
